@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       this.map = new mapboxgl.Map({
         container: "mapDen",
+        preserveDrawingBuffer: true,
         style: {
           version: 8,
           sources: {
@@ -67,6 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
       this.map.on("load", () => {
         console.log("Map loaded, loading initial data for 1800");
         this.loadMapData(1800);
+        this.map.once("idle", () => {
+        console.log("Map fully rendered and ready for export.");
+    });
       });
 
       this.map.on("rotate", () => this.updateNorthArrow());
@@ -355,4 +359,14 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   densityNamespace.init();
+  exportFigure: function () {
+
+    const canvas = this.map.getCanvas();
+
+    const link = document.createElement("a");
+    link.download = "RootsMigrantsdensity_Figure.png";
+    link.href = canvas.toDataURL("image/png");
+
+    link.click();
+},
 });
