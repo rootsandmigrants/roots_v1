@@ -64,13 +64,13 @@ document.addEventListener("DOMContentLoaded", function () {
         zoom: 4,
       });
       // Add this:
-      this.map.addControl(
-        new mapboxgl.ScaleControl({
-          maxWidth: 150,      
-          unit: "metric"     
-        }),
-        "bottom-left"          
-      );
+      // this.map.addControl(
+      //   new mapboxgl.ScaleControl({
+      //     maxWidth: 150,      
+      //     unit: "metric"     
+      //   }),
+      //   "bottom-left"          
+      // );
 
       this.map.on("load", () => {
         console.log("Map loaded, loading initial data for 1800");
