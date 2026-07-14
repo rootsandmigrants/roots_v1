@@ -4,13 +4,13 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  font-family: "Inconsolata", monospace;
+  font-family: "Arial", monospace;
 }
 
 .title {
   margin-top: 3%;
   text-align: center;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   color: black;
 }
@@ -70,7 +70,7 @@ p {
   text-align: justify;
   font-size: 20px;
   color: black;
-  font-family: "Calbiri";
+  font-family: "Aril";
 }
 #map {
   flex: 1;
@@ -124,7 +124,7 @@ p {
   background-color: white;
   padding: 5px 10px;
   border-radius: 5px;
-  font-family: "Open Sans Bold", "Arial Unicode MS Bold";
+  font-family: "Arial Unicode MS Bold";
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: black;
