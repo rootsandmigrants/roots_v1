@@ -75,6 +75,8 @@ p {
 #map {
   flex: 1;
   display: flex;
+  position: relative; 
+
 }
 #slider {
   width: 50%;
@@ -129,8 +131,8 @@ p {
 }
 .map-legend {
   position: absolute;
-  top: 150px; /* Change to top position */
-  left: 500px; /* Change to left position */
+  bottom: 20px;   /* was top: 150px */
+  right: 20px;    /* was left: 500px */
   background-color: white;
   border: 2px solid #ccc;
   border-radius: 5px;
