@@ -63,14 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         center: [-98.35, 39.5],
         zoom: 4,
       });
-      // Add this:
-      // this.map.addControl(
-      //   new mapboxgl.ScaleControl({
-      //     maxWidth: 150,      
-      //     unit: "metric"     
-      //   }),
-      //   "bottom-left"          
-      // );
 
       this.map.on("load", () => {
         console.log("Map loaded, loading initial data for 1800");
@@ -337,8 +329,8 @@ document.addEventListener("DOMContentLoaded", function () {
               source: "labels",
               layout: {
                 "text-field": ["get", "name"],
-                "text-font": ["Arial Unicode MS Bold", "Open Sans Bold"],
-                "text-size": 12,
+                "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+                "text-size": 10,
                 "text-transform": "none",
                 "text-letter-spacing": 0.05,
                 "text-offset": [0, 0.6],
