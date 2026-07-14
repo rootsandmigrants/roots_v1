@@ -359,14 +359,21 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   densityNamespace.init();
-  exportFigure: function () {
+  window.exportApplication = async function () {
 
-    const canvas = this.map.getCanvas();
+    const element = document.getElementById("application");
+
+    const canvas = await html2canvas(element, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: "#ffffff",
+        logging: false
+    });
 
     const link = document.createElement("a");
-    link.download = "RootsMigrantsdensity_Figure.png";
+    link.download = "Roots_Migrants.png";
     link.href = canvas.toDataURL("image/png");
-
     link.click();
-},
+
+};
 });
