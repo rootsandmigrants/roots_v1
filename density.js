@@ -337,8 +337,8 @@ document.addEventListener("DOMContentLoaded", function () {
               source: "labels",
               layout: {
                 "text-field": ["get", "name"],
-                "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
-                "text-size": 10,
+                "text-font": ["Arial Unicode MS Bold", "Open Sans Bold"],
+                "text-size": 12,
                 "text-transform": "none",
                 "text-letter-spacing": 0.05,
                 "text-offset": [0, 0.6],
